@@ -55,19 +55,19 @@ export default function AddWises() {
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>Nova Assinatura</Text>
             <TextInput
-              placeholder="Nome"
+              placeholder="Nome assinatura:"
               style={styles.input}
               value={name}
               onChangeText={setName}
             />
             <TextInput
-              placeholder="Preço"
+              placeholder="Valor mensal: "
               style={styles.input}
               value={price}
               onChangeText={setPrice}
             />
             <TextInput
-              placeholder="Data"
+              placeholder="Data de assinatura: "
               style={styles.input}
               value={dueDate}
               onChangeText={setDueDate}
@@ -104,8 +104,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#595FFF",
     padding: 20,
     borderRadius: 10,
-    marginTop: "70%",
-    marginBottom: 14,
+    marginTop: "100%",
   },
 
   addButtonText: {

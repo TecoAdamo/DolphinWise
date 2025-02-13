@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 18,
     textAlign: "center",
   },
   listContainer: {

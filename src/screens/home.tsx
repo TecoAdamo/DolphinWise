@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Dimensions } from "react-native";
 import UserPhoto from "../components/userPhoto";
 import Card from "../components/card";
 import { useSubscriptions } from "../context/wiseContext";
+import { Filter } from "../components/filterWises/filter";
 
 const { height } = Dimensions.get("window");
 
@@ -21,6 +22,11 @@ export default function Home() {
         <Text style={styles.text}>Bem vindo</Text>
         <Text style={styles.subTxt}>Mateus Adamo</Text>
       </View>
+      <View style={styles.containerView}>
+        <Filter title="Ativas" isActive={true} />
+        <Filter title="Pendentes" />
+        <Filter title="Canceladas" />
+      </View>
       <View style={styles.card}>
         <Card data={subscriptions} />
       </View>
@@ -33,6 +39,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#3AAAFE",
     justifyContent: "flex-end",
+  },
+  containerView: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
   },
   card: {
     backgroundColor: "white",
