@@ -2,20 +2,13 @@ import React from "react";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 import UserPhoto from "../components/userPhoto";
 import Card from "../components/card";
-import { AppNavigatorRoutesProps } from "../routes/appRoutes";
-import { useNavigation } from "@react-navigation/native";
+import { useSubscriptions } from "../context/wiseContext";
 
 const { height } = Dimensions.get("window");
 
-const subscriptions = [
-  { id: "2", name: "Spotify", price: "R$19,90", dueDate: "15/02/2025" },
-  { id: "3", name: "Amazon Prime", price: "R$14,90", dueDate: "20/02/2025" },
-  { id: "4", name: "Disney+", price: "R$27,90", dueDate: "25/02/2025" },
-  { id: "5", name: "Paramount+", price: "R$17,90", dueDate: "25/04/2025" },
-  { id: "6", name: "Star+", price: "R$27,90", dueDate: "20/02/2025" },
-];
-
 export default function Home() {
+  const { subscriptions } = useSubscriptions();
+
   return (
     <View style={styles.container}>
       <View style={styles.containerTexts}>
